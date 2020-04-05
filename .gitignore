@@ -28,3 +28,6 @@ VoodooI2C\ Satellites/*
 docs/index.html
 docs/search.json
 docs/xml/*
+
+# VoodooInput Build folder
+VoodooI2C/VoodooInput/*

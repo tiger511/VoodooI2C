@@ -45,7 +45,7 @@ To install `cldoc`, first clone the custom version of `cldoc` from [this repo](h
 
 ## Building, loading, and installing VoodooI2C
 
-You should now be ready to build VoodooI2C. With XCode, open the `VoodooI2C.xcworkspace` file and build it as usual. Once the build is complete, the products directory should be populated with the `VoodooI2C.kext` file along with many other satellite kexts.
+You first need to get VoodooInput, by running  `src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh) && eval "$src" && mv VoodooInput VoodooI2C` . You should now be ready to build VoodooI2C. With XCode, open the `VoodooI2C.xcworkspace` file and build it as usual. Once the build is complete, the products directory should be populated with the `VoodooI2C.kext` file along with many other satellite kexts.
 
 ### Manually loading VoodooI2C
 
