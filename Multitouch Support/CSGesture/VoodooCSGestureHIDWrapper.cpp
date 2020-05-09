@@ -22,7 +22,9 @@ IOReturn VoodooCSGestureHIDWrapper::setProperties(OSObject *properties) {
     return kIOReturnUnsupported;
 }
 
-IOReturn VoodooCSGestureHIDWrapper::newReportDescriptor(IOMemoryDescriptor **descriptor) const {    IOBufferMemoryDescriptor *buffer = IOBufferMemoryDescriptor::inTaskWithOptions(kernel_task, 0, gestureEngine->reportDescriptorLength());
+IOReturn VoodooCSGestureHIDWrapper::newReportDescriptor(IOMemoryDescriptor **descriptor) const {
+    IOLog("%s:: VoodooCSGestureHIDWrapper newReportDescriptor\n", getName());
+    IOBufferMemoryDescriptor *buffer = IOBufferMemoryDescriptor::inTaskWithOptions(kernel_task, 0, gestureEngine->reportDescriptorLength());
 
     if (buffer == NULL) return kIOReturnNoResources;
     gestureEngine->write_report_descriptor_to_buffer(buffer);

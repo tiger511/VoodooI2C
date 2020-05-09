@@ -969,6 +969,7 @@ void VoodooI2CCSGestureEngine::update_absolute_mouse(char button, SInt16 x, SInt
 }
 
 void VoodooI2CCSGestureEngine::update_keyboard(uint8_t shiftKeys, uint8_t keyCodes[KBD_KEY_CODES]) {
+    IOLog("%s:: VoodooI2CCSGestureEngine update_keyboard\n", getName());
     _CSGESTURE_KEYBOARD_REPORT report;
     report.ReportID = REPORTID_KEYBOARD;
     report.ShiftKeyFlags = shiftKeys;
